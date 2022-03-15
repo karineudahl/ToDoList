@@ -45,3 +45,7 @@ input[type="checkbox"] {
   filter: hue-rotate(76deg);
   /* // 209 er grønn */
 }
+
+input[type="text"] {
+  background: transparent;
+}
