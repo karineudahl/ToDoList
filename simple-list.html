@@ -14,24 +14,23 @@
 <body>
 
     <header>
-        <a href="index.html" class="active">To do list</a>
+        <a href="index.html">To do list</a>
         <p>|</p>
-        <a href="simple-list.html">Simple to do list</a>
+        <a href="simple-list.html" class="active">Simple to do list</a>
     </header>
-
-    <h1>To Do List</h1>
+    
+    <h1>Simple To Do List</h1>
     <div class="explanation-container">
+        <h2>Explanation</h2>
         <p>Add items to list and localstorage</p>
-        <p>Mark items as complete</p>
-        <p>Change list input text</p>
+        <p>Delte one item at a time</p>
         <p>Delete all items</p>
     </div>
 
     <input placeholder="List item" />
     <button type="button">Add</button>
-    <button type="button" id="clear">Remove all to does</button>
     <ul></ul>
 
-    <script src="js/index.js" type="module"></script>
+    <script src="js/simpleList.js" type="module"></script>
 </body>
 </html>
