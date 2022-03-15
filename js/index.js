@@ -4,7 +4,7 @@ import { createList } from "./ui/createList.js";
 import { deleteAllToDoes } from "./ui/deleteAllToDoes.js";
 
 const listInput = document.querySelector("input"); 
-const button = document.querySelector("button"); 
+const button = document.querySelector("#addButton"); 
 
 const listItems = getFromLocalStorage(toDoList); 
 createList(listItems);
@@ -21,13 +21,7 @@ function addItem() {
         listInput.focus();
         listItems.push(newItem); 
 
-        createList(listItems);
         saveToLocalStorage(toDoList, listItems);
+        createList(listItems);
     }
 }
-
-
-
-
-
-

@@ -32,7 +32,7 @@ a {
 }
 
 .explanation-container {
-  background-color: rgba(33, 86, 33, 0.683);
+  background-color: rgba(33, 86, 33, 0.473);
   border-radius: 5px;
   color: white;
   padding: 15px;
@@ -77,7 +77,7 @@ li {
 
 input[type="checkbox"] {
   margin-right: 15px;
-  filter: hue-rotate(76deg);
+  filter: hue-rotate(208deg);
 }
 
 input[type="text"] {

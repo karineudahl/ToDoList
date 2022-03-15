@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+    <title>To Do List | Simple</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -12,25 +12,22 @@
     <script src="https://kit.fontawesome.com/3ca04481c9.js" crossorigin="anonymous"></script> 
 </head>
 <body>
-
     <header>
         <a href="index.html">To do list</a>
         <p>|</p>
         <a href="simple-list.html" class="active">Simple to do list</a>
     </header>
-    
-    <h1>Simple To Do List</h1>
-    <div class="explanation-container">
-        <h2>Explanation</h2>
-        <p>Add items to list and localstorage</p>
-        <p>Delte one item at a time</p>
-        <p>Delete all items</p>
-    </div>
-
-    <input placeholder="List item" />
-    <button type="button">Add</button>
-    <ul></ul>
-
+    <body>
+        <h1>Simple To Do List</h1>
+        <div class="explanation-container">
+            <p>Add items to list and localstorage</p>
+            <p>Delte one item at a time</p>
+        </div>
+        <input placeholder="List item" class="simple-list-input" />
+        <button type="button" class="simple-add-button">Add</button>
+        <ul class="simple-list-ul"></ul>
+    </body>
+    <footer></footer>
     <script src="js/simpleList.js" type="module"></script>
 </body>
 </html>

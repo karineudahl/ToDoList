@@ -1,13 +1,13 @@
 import { simpleToDoList } from "./settings/variables.js";
 import { saveToLocalStorage, getFromLocalStorage } from "./utils/localStorage.js";
 
-const listInput = document.querySelector("input"); 
-const addButton = document.querySelector("button"); 
-const listContainer = document.querySelector("ul"); 
+const listInput = document.querySelector(".simple-list-input"); 
+const addButton = document.querySelector(".simple-add-button"); 
+const listContainer = document.querySelector(".simple-list-ul"); 
 
 let listFromInput = getFromLocalStorage(simpleToDoList); 
 
-createList();
+createSimpleList();
 
 addButton.addEventListener("click", addItemToList); 
 
@@ -16,14 +16,14 @@ function addItemToList() {
 
     if(newItem.length > 1) {
         listFromInput.push(newItem);
-        createList();
+        createSimpleList();
         saveToLocalStorage(simpleToDoList, listFromInput); 
         listInput.value = ""; 
         listInput.focus(); 
     }
 }
 
-function createList() {
+function createSimpleList() {
     listContainer.innerHTML = ""; 
 
     listFromInput.forEach(function(item) {
@@ -38,7 +38,6 @@ function createList() {
     })
 }
 
-
 function removeSingelItemFromList() {
     const deleteListItem = this.dataset.item; 
     const listWithoutDeleted = listFromInput.filter(function(item) {
@@ -48,6 +47,6 @@ function removeSingelItemFromList() {
     }); 
 
     listFromInput = listWithoutDeleted; 
-    createList(); 
+    createSimpleList(); 
     saveToLocalStorage(simpleToDoList, listFromInput)
 }

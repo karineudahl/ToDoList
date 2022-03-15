@@ -4,6 +4,7 @@ import { createList } from "./createList.js";
 
 export function deleteAllToDoes() {
     const deleteAll = document.querySelector("#clear"); 
+    // const listContainer = document.querySelector(".list-ul"); 
 
     deleteAll.addEventListener("click", clearList); 
 
@@ -11,8 +12,8 @@ export function deleteAllToDoes() {
         if(confirm("Delete to does?")) {
             deleteItemFromStorage(toDoList);
 
-            createList([]); 
-        }
-        
+            // listContainer.innerHTML = ""; 
+            createList([]);
+        }     
     }
 }

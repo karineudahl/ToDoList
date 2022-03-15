@@ -2,7 +2,7 @@ import { saveToLocalStorage, getFromLocalStorage } from "../utils/localStorage.j
 import { toDoList } from "../settings/variables.js";
 
 export function createList() {
-    const listContainer = document.querySelector("ul"); 
+    const listContainer = document.querySelector(".list-ul"); 
     const listItems = getFromLocalStorage(toDoList); 
 
     listContainer.innerHTML = ""; 
@@ -13,6 +13,7 @@ export function createList() {
         if(listItem.complete) {
             checked = "checked"; 
         }
+        
         listContainer.innerHTML += `<li>
                                         <input ${checked} class="checkbox" type="checkbox" data-id="${listItem.id}" />
                                         <input class="${checked}" type="text" value="${listItem.item}" data-id="${listItem.id}"></input>
@@ -32,7 +33,6 @@ export function createList() {
 
         const updatedList = updateValueInList(listItems, id, value); 
         saveToLocalStorage(toDoList, updatedList);
-        console.log(updatedList)
     }
 
     checkboxes.forEach(function(box) {
@@ -49,13 +49,11 @@ export function createList() {
     }
 }
 
-
 function updateValueInList(listItems, id, value) {
     const itemIndex = listItems.findIndex((item) => item.id === parseInt(id)); 
     listItems[itemIndex].item = value; 
     return listItems; 
 }
-
 
 function checkboxUpdateList(listItems, id, checked) {
     const thisItemIndex = listItems.findIndex(function(item) {
