@@ -32,6 +32,16 @@ ul {
   padding-inline-start: 0px;
 }
 
+li {
+  margin: 5px 0px;
+}
+
 .checked {
-  color: blueviolet;
+  color: #6e7569;
+}
+
+input[type="checkbox"] {
+  margin-right: 15px;
+  filter: hue-rotate(76deg);
+  /* // 209 er grønn */
 }

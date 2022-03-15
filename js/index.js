@@ -32,16 +32,19 @@ function createList() {
         if(listItem.complete) {
             checked = "checked"; 
         }
-        listContainer.innerHTML += `<li><input ${checked} type="checkbox" data-id="${listItem.id}" /><span class="${checked}">${listItem.item}</span></li>`
+        listContainer.innerHTML += `<li>
+                                        <input ${checked} type="checkbox" data-id="${listItem.id}" />
+                                            <span class="${checked}">${listItem.item}</span>
+                                    </li>`
     }); 
 
     const checkboxes = document.querySelectorAll("li input"); 
 
     checkboxes.forEach(function(box) {
-        box.addEventListener("click", toggelComplete);
-    }); 
+        box.addEventListener("click", checkbox);
+    });  
 
-    function toggelComplete(event) {
+    function checkbox(event) {
         const id = event.target.dataset.id;
         const checked = event.target.checked; 
     
