@@ -3,16 +3,14 @@ import { toDoList } from "../settings/variables.js";
 import { createList } from "./createList.js";
 
 export function deleteAllToDoes() {
-    const deleteAll = document.querySelector("#clear"); 
-    // const listContainer = document.querySelector(".list-ul"); 
+    const deleteAll = document.querySelector("#clear");  
 
     deleteAll.addEventListener("click", clearList); 
 
     function clearList() {
         if(confirm("Delete to does?")) {
             deleteItemFromStorage(toDoList);
-
-            // listContainer.innerHTML = ""; 
+            location.reload();
             createList([]);
         }     
     }
