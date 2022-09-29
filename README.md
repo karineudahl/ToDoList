@@ -14,3 +14,13 @@
 - 📄 HTML
 - 👁 CSS
 - 👩🏽‍💻 JavaScript
+
+# Getting started 
+## Installing
+Clone the repo
+```
+gh repo clone karineudahl/ToDoList
+```
+
+## Running 
+To run the app, right click on one HTML file and "Open with Live Server"
